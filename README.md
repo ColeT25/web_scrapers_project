@@ -6,13 +6,15 @@ Hey, my name is Cole Thacker. I've recently began working on creating some web s
 - Begin by cloning this repo
 - Next make sure you have the google chrome browser installed on your laptop
 - Open command prompt and create a virtual environment for python 3.9 or above
-	> Use the command "python3 -m venv path/to/virtual_environment to create your environment from command line
+	> Use the command "python3 -m venv path/to/virtual_environment" to create your environment from command line
 - Using command line, cd into C:\path_to_venv\Scripts
 - Make sure pip is up to date
-	> To update pip, run pip.exe install --upgrade pip
+	> To update pip, run "python.exe -m pip install --upgrade pip"
 - Install project requirements
-	> Run pip.exe install -r C:\path_to_repo_clone\requirements.txt
+	> Run "python.exe -m pip install -r C:\path_to_repo_clone\requirements.txt"
 - Your Environment should be ready to use, open the project in the IDE of your choice and configure your virtual environment to be your python intrepreter!
+
+**THE ABOVE STEPS HAVE ONLY BEEN TESTED ON WINDOWS MACHINES**
 
 
 ## Running Specific Files
