@@ -14,6 +14,8 @@ Hey, my name is Cole Thacker. I've recently began working on creating some web s
 	> Run pip.exe install -r C:\path_to_repo_clone\requirements.txt
 - Your Environment should be ready to use, open the project in the IDE of your choice and configure your virtual environment to be your python intrepreter!
 
+**THE ABOVE STEPS HAVE ONLY BEEN TESTED ON WINDOWS MACHINES**
+
 
 ## Running Specific Files
 **reddit_scrapers\reddit_scrape_for_search_term:** There are 2 different ways to use this file. The default way is to just run the file like any old python file, and input the term you want to search on Reddit when prompted. The script will then scrape the Reddit search results for the term you input and write it to a csv file in scraped_data\reddit. The resulting csv file will be named with the date you ran the script, and the search query you input. The alternative way to use this file is to provide your search query as a command line argument. The script will still function the same way, but this provides a different way to interact with the script. Features will also be being added in the future to customize your searches in different ways, so stay tuned!
