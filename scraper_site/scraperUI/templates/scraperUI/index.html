@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+{% if search_results %}
+    <ul>
+    {% for result in search_results %}
+        <li><a href="/scraperUI/{{ result.search_term }}/">{{ result.post_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No searches are available.</p>
+{% endif %}
+</body>
+</html>
