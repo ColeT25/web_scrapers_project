@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from .models import RedditSearchResult, RedditSearchTerm
 
@@ -11,8 +11,9 @@ def index(request):
 
 
 def details(request, search_term_id):
-    return HttpResponse(f"You're looking at the search term details for {search_term_id}")
-
+    search_term = get_object_or_404(RedditSearchTerm, pk=search_term_id)
+    top_results = RedditSearchResult.objects.filter(search_term=search_term_id).order_by('-upvotes')[:10]
+    return render(request, 'scraperUI/details.html', {'search_term': search_term, 'top_results': top_results})
 
 def results(request, search_term_id):
     return HttpResponse(f"You're looking at the search results for search term {search_term_id}")

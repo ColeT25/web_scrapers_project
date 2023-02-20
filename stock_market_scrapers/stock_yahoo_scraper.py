@@ -12,7 +12,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-# TODO THIS FILE IS VERY INCOMPLETE, SO KEEP THAT IN MIND
+# TODO THIS FILE IS VERY INCOMPLETE, DOESN'T WORK YET AND IS MISSING DOCUMENTATION
 def create_company_data_storage(*companies):
     data_struct = {}
     for company in companies:

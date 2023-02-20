@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details for {{search_term.searched_term}}</title>
+    <link rel="stylesheet" href="{% static 'page_styles.css' %}">
+</head>
+<body>
+    <h1>Most upvoted results for {{search_term.searched_term}}</h1>
+    <ul>
+        {% for result in top_results %}
+            <li>{{ result.post_title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
