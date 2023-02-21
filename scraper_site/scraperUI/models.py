@@ -22,6 +22,7 @@ class RedditSearchResult(models.Model):
     subreddit = models.CharField(max_length=30)
     upvotes = models.IntegerField(default=0)
     comments = models.IntegerField(default=0)
+    # todo add rewards field
 
     def __str__(self):
         return f'"{self.post_title}" by {self.author} on {self.subreddit}'

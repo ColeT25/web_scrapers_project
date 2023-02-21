@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'page_styles.css' %}">
 </head>
 <body>
-    <h1>Most upvoted results for {{search_term.searched_term}}</h1>
+    <h1>All results for {{search_term.searched_term}}</h1>
     <ul>
         {% for result in top_results %}
             <li>{{ result.post_title }}</li>

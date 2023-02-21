@@ -10,8 +10,11 @@
     <h1>Top Scraped Reddit Posts</h1>
     {% if search_results %}
         <ul>
-        {% for result in search_results %}
-            <li><a href="{% url 'scraperUI:details' result.search_term.id %}">{{ result.post_title }}</a></li>
+        {% for search_term, results in search_results.items %}
+            <h3>Top results for {{ search_term }}:</h3>
+            {% for search_result in results %}
+                <li><a href="{% url 'scraperUI:details' search_result.search_term.id %}">{{ search_result.post_title }}</a></li>
+            {% endfor %}
         {% endfor %}
         </ul>
     {% else %}
